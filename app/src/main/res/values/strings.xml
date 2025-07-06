@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Markdown Parcer</string>
+    <string name="enter_url_edit_text_hint">Введите URL текста для загрузки</string>
+    <string name="load_markdown_with_url_button">Загрузить по URL</string>
+    <string name="load_text_from_memory_button">Выбрать на устройстве</string>
+    <string name="preview_text_title">Предварительный просмотр текста</string>
+    <string name="open_full_text_button">Открыть текс полностью</string>
+    <string name="edit_text_button_text">Редактировать текст</string>
+    <string name="loading_images_failed">Неудалось загрузить изображения</string>
+    <string name="save_button">Сохранить</string>
+    <string name="cancel_button">Отменить</string>
+    <string name="bold_style_button">Жирный</string>
+    <string name="italic_style_button">Курсив</string>
+    <string name="stroke_through_style_button">Зачёркнутый</string>
+    <string name="no_text_selected_warning">Выделите текст, чтобы применить стиль</string>
+</resources>
