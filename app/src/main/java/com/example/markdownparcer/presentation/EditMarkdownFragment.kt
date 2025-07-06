@@ -1,7 +1,6 @@
 package com.example.markdownparcer.presentation
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -81,7 +80,6 @@ class EditMarkdownFragment() : Fragment() {
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.originalMarkdownFlow.collect { text ->
                 if (text != null) {
-                    Log.d("MarkdownFragment", "edit markdownObserver: $text")
                     binding.editMarkdownTextField.setText(text)
                 }
             }

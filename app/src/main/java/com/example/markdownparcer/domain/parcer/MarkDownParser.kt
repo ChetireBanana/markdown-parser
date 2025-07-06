@@ -26,7 +26,7 @@ class MarkDownParser() {
                     if (match != null) {
                         result.add(imageParsing(match))
                     } else {
-                        val (parsedPart, _) = textParsing(lines[currentLine], 0)
+                        val (parsedPart, _) = paragraphParsing(lines[currentLine], 0)
                         result.add(MarkDownElement.Paragraph(parsedPart))
                     }
                 }
@@ -50,14 +50,14 @@ class MarkDownParser() {
                                 continue
                             }
                         } else {
-                            val (parsedPart, _) = textParsing(lines[currentLine], 0)
+                            val (parsedPart, _) = paragraphParsing(lines[currentLine], 0)
                             result.add(MarkDownElement.Paragraph(parsedPart))
                         }
                     }
                 }
                 // Paragraph parsing
                 else {
-                    val (parsedPart, _) = textParsing(lines[currentLine], 0)
+                    val (parsedPart, _) = paragraphParsing(lines[currentLine], 0)
                     result.add(MarkDownElement.Paragraph(parsedPart))
                 }
             }
@@ -138,7 +138,7 @@ class MarkDownParser() {
         } else null
     }
 
-    private fun textParsing(
+    private fun paragraphParsing(
         string: String,
         startIndex: Int,
         endMarker: String? = null
@@ -148,7 +148,6 @@ class MarkDownParser() {
 
         while (currentIndex < string.length) {
             when {
-                // End of parsing check
                 endMarker != null && string.startsWith(endMarker, currentIndex) -> {
                     return parts to (currentIndex + endMarker.length)
                 }

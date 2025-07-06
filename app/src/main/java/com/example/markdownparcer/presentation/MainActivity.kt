@@ -16,6 +16,5 @@ class MainActivity : AppCompatActivity() {
                 .replace(R.id.container, LoadingMarkdownFragment())
                 .commit()
         }
-
     }
 }
